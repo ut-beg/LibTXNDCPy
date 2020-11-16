@@ -1,0 +1,82 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2e5d9af6-6fd2-4014-ad70-af0b15e2fedf</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>LibTXNDCPy\NDCconvertSamples.py</StartupFile>
+    <SearchPath>LibTXNDCPy;test</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>LibTXNDCPy</Name>
+    <RootNamespace>LibTXNDCPy</RootNamespace>
+    <TestFramework>unittest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>./test/</UnitTestRootDirectory>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>-f "C:\Users\Aaron Averett\Desktop\testing\data.json" -o "C:\Users\Aaron Averett\Desktop\testing\output.xml"</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="LibTXNDCPy\NDCconvertSamples.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LibTXNDCPy\NDCGeophysicalLog.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LibTXNDCPy\NDCRockCoreSample.py" />
+    <Compile Include="LibTXNDCPy\NDCSample.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LibTXNDCPy\NDCSampleFactory.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LibTXNDCPy\NDCSampleFromOGWell.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LibTXNDCPy\NDCSamples.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LibTXNDCPy\NGGDPPTypes.py" />
+    <Compile Include="LibTXNDCPy\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="setup.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\TestLibTXNDCPy.py" />
+    <Compile Include="test\test_NDCGeophysicalLog.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\test_NDCRockCoreSample.py" />
+    <Compile Include="test\test_NDCSample.py" />
+    <Compile Include="test\test_NDCSamples.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LibTXNDCPy\" />
+    <Folder Include="test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

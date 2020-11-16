@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: LibTXNDCPy-averetta-beg
+Version: 0.1.0
+Summary: A library for generating the USGS NDGGDPP's XML metadata format for ingestion into the National Digital (geologic sample) Catalog (NDC).
+Home-page: https://github.com/pypa/sampleproject
+Author: Aaron Averett, Bureau of Economic Geology
+Author-email: aaron.averett@beg.utexas.edu
+License: UNKNOWN
+Description: LibTXNDCPy is a Python library for generating the XML metadata format required for submission to the USGS NGGDPP National Digital Catalog of geologic samples and other materials.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

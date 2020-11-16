@@ -3,3 +3,12 @@
 ################################################################################
 
 /LibTXNDCPy/ConsoleApp1/bin/Debug
+/LibTXNDCPy/ConsoleApp1/obj/Debug
+/LibTXNDCPy/LibTXNDCCSharp/bin/Debug
+/LibTXNDCPy/LibTXNDCCSharp/obj/Debug
+/LibTXNDCPy/packages
+/LibTXNDCPy/TestLibTXNDCPy/__pycache__
+/LibTXNDCPy/LibTXNDCPy/__pycache__
+/LibTXNDCPy/LibTXNDCPy/test/__pycache__
+/LibTXNDCPy/LibTXNDCPy/LibTXNDCPy/__pycache__
+/LibTXNDCPy/.vs/LibTXNDCPy

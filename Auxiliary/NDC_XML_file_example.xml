@@ -1,0 +1,83 @@
+<samples xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://data.usgs.gov/nggdpp/NGGDPPMetadataSample_v4.xsd">
+  <sample>
+  <collectionID>55ce5b1ee4b01487cbfc7104</collectionID>
+  <title>
+  NGGDPP XML File Example - Title should be short for display but distinguishable from other records. Title is used in listings and search results. 
+  </title>
+  <alternateTitle><title>AlternateTitle may include additional descriptions or identifiers.</title></alternateTitle>
+  <datasetReferenceDate>2015-07-07</datasetReferenceDate>
+  <abstract>
+  The human-readable description of the individual record used to help determine the
+  nature of the underlying physical data resource. Due to the general nature of the
+  NDC, a fair amount of information about the data resource may need to be captured
+  into this one general element. Example: Sample: Core Research Center, Cutting
+  DD18210, from well operated by St. Michael Exploration, located in Weld County,
+  CO, under lease 2-1 Grace State, with API number 0512310130. 
+  </abstract>
+  <supplementalInformation>
+  This field is used to provide specific information about how to access the physical
+  data represented by the metadata record. This may be general for the entire
+  collection (e.g., a URL to another Web site) or a reference to an online resource such
+  as an ordering system with a specific ID. Example: ResourceID: 2003-01-0050,
+  Repository: Arizona Geological Survey, Contact: Mining Records Curator, Address:
+  1520 West Adams St Phoenix AZ 85007, E-mail: inquiries@azgs.az.gov, Phone: 602-
+  771-1601
+  </supplementalInformation>
+  <alternateGeometry>
+  The coordinates are represented in World Geodetic System 1984 (WGS84)
+  </alternateGeometry>
+  <dates>
+  <date>1984-08-01</date>
+  </dates>
+  <dataType>Auger Samples,Fluid Samples,Geochemical Samples,Hand Samples,Ice Cores,Paleontological Samples,Rock Cores,Rock Cuttings,Sediment Cores,Sidewall Cores,Thin Sections and Polished Sections,Type Stratigraphic Sections</dataType>
+  <coordinates>-149.775924682617,67.5814791592797</coordinates>
+  <onlineResource>
+  <resourceURL>http://www.usgs.gov</resourceURL>
+  </onlineResource>
+  <browseGraphic><resourceURL>https://my.usgs.gov/confluence/download/attachments/608437869/flynn-creek-cores.png</resourceURL>
+  </browseGraphic>
+  <verticalExtent>m,35,0</verticalExtent>
+  </sample>
+  <sample>
+    <collectionID>55ce5b1ee4b01487cbfc7104</collectionID>
+    <title>
+      NGGDPP XML File Example - Title should be short for display but distinguishable from other records. Title is used in listings and search results.
+    </title>
+    <alternateTitle>
+      <title>AlternateTitle may include additional descriptions or identifiers.</title>
+    </alternateTitle>
+    <datasetReferenceDate>2015-07-07</datasetReferenceDate>
+    <abstract>
+      The human-readable description of the individual record used to help determine the
+      nature of the underlying physical data resource. Due to the general nature of the
+      NDC, a fair amount of information about the data resource may need to be captured
+      into this one general element. Example: Sample: Core Research Center, Cutting
+      DD18210, from well operated by St. Michael Exploration, located in Weld County,
+      CO, under lease 2-1 Grace State, with API number 0512310130.
+    </abstract>
+    <supplementalInformation>
+      This field is used to provide specific information about how to access the physical
+      data represented by the metadata record. This may be general for the entire
+      collection (e.g., a URL to another Web site) or a reference to an online resource such
+      as an ordering system with a specific ID. Example: ResourceID: 2003-01-0050,
+      Repository: Arizona Geological Survey, Contact: Mining Records Curator, Address:
+      1520 West Adams St Phoenix AZ 85007, E-mail: inquiries@azgs.az.gov, Phone: 602-
+      771-1601
+    </supplementalInformation>
+    <alternateGeometry>
+      The coordinates are represented in World Geodetic System 1984 (WGS84)
+    </alternateGeometry>
+    <dates>
+      <date>1984-08-01</date>
+    </dates>
+    <dataType>Auger Samples,Fluid Samples,Geochemical Samples,Hand Samples,Ice Cores,Paleontological Samples,Rock Cores,Rock Cuttings,Sediment Cores,Sidewall Cores,Thin Sections and Polished Sections,Type Stratigraphic Sections</dataType>
+    <coordinates>-149.775924682617,67.5814791592797</coordinates>
+    <onlineResource>
+      <resourceURL>http://www.usgs.gov</resourceURL>
+    </onlineResource>
+    <browseGraphic>
+      <resourceURL>https://my.usgs.gov/confluence/download/attachments/608437869/flynn-creek-cores.png</resourceURL>
+    </browseGraphic>
+    <verticalExtent>m,35,0</verticalExtent>
+  </sample>
+</samples>
