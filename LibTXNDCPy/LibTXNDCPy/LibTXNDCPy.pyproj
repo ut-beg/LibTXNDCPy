@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2e5d9af6-6fd2-4014-ad70-af0b15e2fedf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>LibTXNDCPy\NDCconvertSamples.py</StartupFile>
+    <StartupFile>test\TestLibTXNDCPy.py</StartupFile>
     <SearchPath>LibTXNDCPy;test</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>

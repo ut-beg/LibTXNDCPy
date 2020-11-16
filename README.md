@@ -45,3 +45,39 @@ xmlText = samples.toNDCXmlString()
 print(xmlText)
 
 ```
+
+And our output looks like this:
+```
+<samples>
+    <sample>
+        <collectionID>testCollectionID</collectionID>
+        <title>Test+Title</title>
+        <datasetReferenceDate>2020-11-16T15:39:12.2219593-06:00</datasetReferenceDate>
+        <abstract>Sample+ID: 0
+Accession+Number: C000001
+API Number: 1111111111
+Sample Type: Rock+Core
+Formation: Eagle+Ford
+Formation Age: Precambrian</abstract>
+        <supplementalInformation>Sample+ID+0+-+Bureau+of+Economic+Geology+Core+Research+Center,+10100+Burnet+Rd.,+Austin,+TX+78758,+512-475-9561</supplementalInformation>
+        <dataType>Rock+Core</dataType>
+        <coordinates>-98.0,32.0</coordinates>
+        <verticalExtent>ft,200.0,120.0</verticalExtent>
+    </sample>
+    <sample>
+        <collectionID>testCollectionID</collectionID>
+        <title>Test+Title+2</title>
+        <datasetReferenceDate>2020-11-16T15:39:12.2259613-06:00</datasetReferenceDate>
+        <abstract>Sample+ID: 1
+Accession+Number: C000002
+API Number: 2222222222
+Sample Type: Rock+Core
+Formation: Permian+Basin
+Formation Age: Jurassic</abstract>
+        <supplementalInformation>Sample+ID+1+-+Bureau+of+Economic+Geology+Core+Research+Center,+10100+Burnet+Rd.,+Austin+TX+78758,+512-475-9561</supplementalInformation>
+        <dataType>Rock+Core</dataType>
+        <coordinates>-98.0,31.0</coordinates>
+        <verticalExtent>ft,250.0,200.0</verticalExtent>
+    </sample>
+</samples>
+```
