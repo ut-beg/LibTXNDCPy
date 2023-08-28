@@ -9,48 +9,95 @@ from urllib.parse import unquote
 from urllib.parse import quote
 import argparse
 
-#Set up parsing of the command line arguments
+class NDCSampleConverter:
 
-parser = argparse.ArgumentParser("NDCconvertSamples")
+    def __init__(self, testmode=False):
 
-parser.add_argument("-f", required=False, help="load data from file")
-parser.add_argument("-d", required=False, help="URLEncoded json data")
-parser.add_argument("-o", required=False, help="Output file path.  If this is empty, we output to the console.")
-parser.add_argument("-u", action="store_true", help="URLEncode the output")
+        #Initialize some class vars
+        self.json = ""
+        self.samples = None
+        self.inFilePath = None
+        self.urlEncodedJson = None
+        self.outFilePath = None
+        self.doUrlEncode = False
+        self.xml = None
 
-parsedargs = parser.parse_args()
+        if testmode != True:
+            self.parseArgs()
 
-json = ""
+    def parseArgs(self):
+        #Set up parsing of the command line arguments
+        parser = argparse.ArgumentParser("NDCconvertSamples")
 
-#option D 
-if(parsedargs.d != None):
-    #Got the data from the command line
-    encodedjson = parsedargs.d
-    #De-urlencode the char data into some json (a slightly less big fat blob of char data)
-    json = unquote(encodedjson)
+        parser.add_argument("-f", required=False, help="load data from file")
+        parser.add_argument("-d", required=False, help="URLEncoded json data")
+        parser.add_argument("-o", required=False, help="Output file path.  If this is empty, we output to the console.")
+        parser.add_argument("-u", action="store_true", help="URLEncode the output")
 
-#option F
-elif(parsedargs.f != None):
-    filename = parsedargs.f
-    with open(filename) as reader:
-        json = reader.read()
+        parsedargs = parser.parse_args()
 
-fac = NDCSampleFactory()
+        #go from parsed arguments to set up class vars
+        if(parsedargs.f != None):
+            self.inFilePath = parsedargs.f
 
-#Hand the json off to our library and get an NDCSample back
-samples = fac.createSamplesWithJson(json)
+        if(parsedargs.d != None):
+            self.urlEncodedJson = parsedargs.d
 
-#Export the NDCSample to its XML expression
-xml = samples.toNDCXmlString()
+        if(parsedargs.o != None):
+            self.outFilePath = parsedargs.o
 
-#if the user requested that we urlencode the output, do so.
-if(parsedargs.u != None and parsedargs.u == True):
-    xml = quote(xml)
+        if(parsedargs.u != None):
+            self.doUrlEncode = parsedargs.u
+            
+    def loadFromUrlEncodedString(self,blob):
+        #De-urlencode the char data into some json (a slightly less big fat blob of char data)
+        self.json = unquote(blob)
 
-if(parsedargs.o != None):
-    outfilename = parsedargs.o
-    with open(outfilename, "w") as writer:
-        writer.write(xml)
-else: 
-    #Output the string to the console
-    print(xml)
+    def loadFromFile(self, filename):
+        with open(filename) as reader:
+            self.json = reader.read()
+
+    def populateSamples(self):
+        if self.json != "":
+            fac = NDCSampleFactory()
+
+            #Hand the json off to our library and get an NDCSample back
+            self.samples = fac.createSamplesWithJson(self.json)
+
+    def outToConsole(self, data):
+        print(data)
+
+    def outToFile(self, data):
+        outfilename = self.parsedargs.o
+        with open(outfilename, "w") as writer:
+            writer.write(data)
+
+    def doRequestedAction(self):
+        #option D 
+        if(self.urlEncodedJson != None):
+            self.loadFromUrlEncodedString(self.urlEncodedJson)
+
+        #option F
+        elif(self.inFilePath != None):
+           self.loadFromFile(self.inFilePath)
+
+        #populate our samples object
+        self.populateSamples()
+
+        #Export the NDCSample to its XML expression
+        self.xml = self.samples.toNDCXmlString()
+
+        #if the user requested that we urlencode the output, do so.
+        if(self.xml != None and self.doUrlEncode == True):
+            xml = quote(self.xml)
+
+        if(self.outFilePath != None):
+            self.outToFile(self.xml)
+        else: 
+            #Output the string to the console
+            self.outToConsole(self.xml)
+
+
+if __name__ == '__main__':
+    app = NDCSampleConverter()
+    app.doRequestedAction()

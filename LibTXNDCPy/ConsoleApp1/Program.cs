@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
- *  This is an example for consuming LibTXNDCPy from C#.
+ *  This is an example for consuming LibTXNDCPy from C# by using the LibTXNDCCSharp companion library
  */
 
 namespace ConsoleApp1
@@ -71,6 +71,23 @@ namespace ConsoleApp1
 
             //Write the XML to the console.  You'd presumably save this to a file or write it into the HTTP response or something in a real application.
             Console.WriteLine(sampleXml);
+
+            //Also write the XML to a file
+            System.IO.StreamWriter swxml = new System.IO.StreamWriter("samples.xml");
+            swxml.Write(sampleXml);
+            swxml.Close();
+
+            //We can also export to json and urlencodedjson
+            string json = samples.toJson();
+            string urlencoded = samples.toUrlEncodedJson();
+
+            System.IO.StreamWriter swjson = new System.IO.StreamWriter("samples.json");
+            swjson.Write(json);
+            swjson.Close();
+
+            System.IO.StreamWriter usw = new System.IO.StreamWriter("urlencoded.txt");
+            usw.Write(urlencoded);
+            usw.Close();
 
             //When run from the Visual Studio debugger, the command line window disappears, so we'll 
             Console.WriteLine("Press enter to quit.");

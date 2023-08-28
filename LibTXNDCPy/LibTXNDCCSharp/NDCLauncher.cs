@@ -13,7 +13,7 @@ namespace LibTXNDCCSharp
     /// <summary>
     /// This class 
     /// </summary>
-    static class NDCLauncher
+   static class NDCLauncher
     {
         static string _pythonPath = "python.exe";
         static string _libTXNDCPyPath = ".\\..\\..\\..\\LibTXNDCPy\\LibTXNDCPy";
@@ -66,6 +66,18 @@ namespace LibTXNDCCSharp
             ret = System.Web.HttpUtility.UrlDecode(ret);
 
             return ret;
+        }
+
+        public static string toJson(NDCSamples samples, bool urlEncode)
+        {
+            string jsonContent = JsonConvert.SerializeObject(samples);
+
+            if(urlEncode)
+            {
+                jsonContent = System.Web.HttpUtility.UrlEncode(jsonContent);
+            }
+
+            return jsonContent;
         }
 
         /// <summary>

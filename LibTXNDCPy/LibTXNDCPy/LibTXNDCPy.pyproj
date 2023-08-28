@@ -53,6 +53,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="test\TestLibTXNDCPy.py" />
+    <Compile Include="test\test_NDCconvertSamples.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test\test_NDCGeophysicalLog.py">
       <SubType>Code</SubType>
     </Compile>
@@ -64,11 +67,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="LibTXNDCPy\" />
+    <Folder Include="test\testfiles\" />
     <Folder Include="test\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE" />
     <Content Include="README.md" />
+    <Content Include="test\testfiles\samples.json" />
+    <Content Include="test\testfiles\urlencoded.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

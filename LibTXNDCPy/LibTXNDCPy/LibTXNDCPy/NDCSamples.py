@@ -1,3 +1,6 @@
+# NDCSamples.py - Aaron Averett - Bureau of Economic Geology, 2020
+# This represents the top level container tag in the NDC XML schema.
+
 import NDCSample
 import NGGDPPTypes
 from io import StringIO
