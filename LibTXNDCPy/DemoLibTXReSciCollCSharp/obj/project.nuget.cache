@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "I5gku9t0q+DYmTHv2yqqRiKgp0FvaEcv8qVcF+MPpU9Be9H/RGenSXesvpnLMZm1gVBKiC9a4U/euCbHsDGiPA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Aaron\\source\\repos\\LibTXNDCPy2\\LibTXNDCPy\\DemoLibTXReSciCollCSharp\\DemoLibTXReSciCollCSharp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aaron\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

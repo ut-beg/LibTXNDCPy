@@ -49,11 +49,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LibTXNDCCSharp\LibTXNDCCSharp.csproj">
-      <Project>{f0821507-89d0-4010-bf16-89e24e7efca2}</Project>
-      <Name>LibTXNDCCSharp</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
