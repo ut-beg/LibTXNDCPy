@@ -1,0 +1,12 @@
+C:\Users\Aaron\source\repos\LibTXNDCPy2\LibTXNDCPy\LibTXReSciCollCSharp\obj\Debug\net7.0\LibTXReSciCollCSharp.csproj.AssemblyReference.cache
+C:\Users\Aaron\source\repos\LibTXNDCPy2\LibTXNDCPy\LibTXReSciCollCSharp\obj\Debug\net7.0\LibTXReSciCollCSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aaron\source\repos\LibTXNDCPy2\LibTXNDCPy\LibTXReSciCollCSharp\obj\Debug\net7.0\LibTXReSciCollCSharp.AssemblyInfoInputs.cache
+C:\Users\Aaron\source\repos\LibTXNDCPy2\LibTXNDCPy\LibTXReSciCollCSharp\obj\Debug\net7.0\LibTXReSciCollCSharp.AssemblyInfo.cs
+C:\Users\Aaron\source\repos\LibTXNDCPy2\LibTXNDCPy\LibTXReSciCollCSharp\obj\Debug\net7.0\LibTXReSciCollCSharp.csproj.CoreCompileInputs.cache
+C:\Users\Aaron\source\repos\LibTXNDCPy2\LibTXNDCPy\LibTXReSciCollCSharp\bin\Debug\net7.0\LibTXReSciCollCSharp.deps.json
+C:\Users\Aaron\source\repos\LibTXNDCPy2\LibTXNDCPy\LibTXReSciCollCSharp\bin\Debug\net7.0\LibTXReSciCollCSharp.dll
+C:\Users\Aaron\source\repos\LibTXNDCPy2\LibTXNDCPy\LibTXReSciCollCSharp\bin\Debug\net7.0\LibTXReSciCollCSharp.pdb
+C:\Users\Aaron\source\repos\LibTXNDCPy2\LibTXNDCPy\LibTXReSciCollCSharp\obj\Debug\net7.0\LibTXReSciCollCSharp.dll
+C:\Users\Aaron\source\repos\LibTXNDCPy2\LibTXNDCPy\LibTXReSciCollCSharp\obj\Debug\net7.0\refint\LibTXReSciCollCSharp.dll
+C:\Users\Aaron\source\repos\LibTXNDCPy2\LibTXNDCPy\LibTXReSciCollCSharp\obj\Debug\net7.0\LibTXReSciCollCSharp.pdb
+C:\Users\Aaron\source\repos\LibTXNDCPy2\LibTXNDCPy\LibTXReSciCollCSharp\obj\Debug\net7.0\ref\LibTXReSciCollCSharp.dll
