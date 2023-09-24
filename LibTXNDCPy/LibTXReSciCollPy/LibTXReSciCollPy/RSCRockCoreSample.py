@@ -10,16 +10,7 @@ class RSCRockCoreSample(RSCSampleFromOGWell):
         self.sampleTypeDesc = None
         self.formationName = None
         self.formationAge = None
-
-    #This is the human-readable description of the sample type.  Unlike the "data type", it can be whatever we want.
-    @property
-    def sampleTypeDesc(self):
-        return self.__sampleTypeDesc
-
-    @sampleTypeDesc.setter
-    def sampleTypeDesc(self, val):
-        self.__sampleTypeDesc = val
-
+        
     #The formation name property
     @property
     def formationName(self):

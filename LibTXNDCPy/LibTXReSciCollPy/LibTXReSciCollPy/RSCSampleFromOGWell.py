@@ -88,11 +88,63 @@ class RSCSampleFromOGWell(RSCSample):
     def operatorName(self, val):
         self.__operatorName = val
 
+    #This is the human-readable description of the sample type.  Unlike the "data type", it can be whatever we want.
+    @property
+    def sampleTypeDesc(self):
+        return self.__sampleTypeDesc
+
+    @sampleTypeDesc.setter
+    def sampleTypeDesc(self, val):
+        self.__sampleTypeDesc = val
+
+    def getAPIBasedTitle(self):
+        ret = None
+
+        #A real API number typically has at least ten digits, so we check here to make sure we have at least that many:
+        #The goofy business with the len(str(int... is there to try to FORCE the api number to be a string, since some data sources try to treat it as a huge number
+        if self.apiNumber != None and len(str(self.apiNumber)) >= 10:
+            ret = "{0} from API number {1}".format(self.sampleTypeDesc, self.apiNumber)
+
+        return ret
+
+    def getLocationBasedTitle(self):
+
+        ret = None
+
+        if self.leaseName != None and self.wellNumber != None and self.countyName != None and self.stateName != None:
+            ret = "{0} from {1} {2}, from {3} county/parrish, {4}".format(self.sampleTypeDesc, self.leaseName, self.wellNumber, self.countyName, self.stateName)
+
+        return ret
+
+    def composeTitle(self):
+        ret = None
+
+        #Try to get the API-based title
+        ret = self.getAPIBasedTitle()
+
+        #If we didn't get an API based title...
+        if ret == None:
+            ret = self.getLocationBasedTitle()
+
+            #If we didn't get a location 
+            if ret == None:
+               ret = "{0} number {1}".format(self.sampleTypeDesc, self.localID)
+        
+        return ret
+
+    def composeAlternateTitle(self):
+        ret = None
+
+        ret = self.getLocationBasedTitle()
+        
+        return ret
+
     def composeAbstractElements(self):
         """ Returns a list of strings, each representing a line in the final abstract value """
         ret = super().composeAbstractElements()
 
         #tack our abstract elements on to the list.
+        ret.append("This sample comes from the following well:")
         self.addAbstractElement(self.apiNumber, "API Number", ret)
         self.addAbstractElement(self.leaseName, "Lease Name", ret)
         self.addAbstractElement(self.wellNumber, "Well Number", ret)

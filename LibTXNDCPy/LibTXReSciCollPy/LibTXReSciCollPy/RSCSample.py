@@ -60,7 +60,16 @@ class RSCSample(object):
     #title property
     @property
     def title(self):
-        return self.__title  
+
+        ret = None
+
+        #If no title is set, see if we can compose one.
+        if self.__title == None or self.__title == "":
+            ret = self.composeTitle()
+        else:
+            ret = self.__title
+
+        return ret
 
     @title.setter
     def title(self, val):
@@ -140,7 +149,16 @@ class RSCSample(object):
     #Alternate title property
     @property
     def alternateTitle(self):
-        return self.__alternateTitle
+        
+        ret = None
+
+        #If no title is set, see if we can compose one.
+        if self.__alternateTitle == None or self.__alternateTitle == "":
+            ret = self.composeAlternateTitle()
+        else:
+            ret = self.__alternateTitle
+
+        return ret
 
     @alternateTitle.setter
     def alternateTitle(self, val):
@@ -424,10 +442,16 @@ class RSCSample(object):
 
         return ret
 
-    def addAbstractElement(self, element, label, list):
+    def addAbstractElement(self, element, label, list, atBeginning = False):
         """ Adds an element and label to the set of items to be included in our abstract text if the value is not null. """
         if element != None and label != None:
-            list.append(label + ": " + element)
+
+            content = "{0}: {1}".format(label, element)
+
+            if atBeginning == False:
+                list.append(content)
+            else:
+                list.insert(0, content)
 
     def composeAbstractElements(self):
         """ Returns a list of strings, each representing a line in the final abstract value """
@@ -485,6 +509,23 @@ class RSCSample(object):
         if(self.publicationDate == None or self.publicationDate == ""):
             raise ValueError("Dataset reference date is required and cannot be empty.")
 
+    
+    def composeTitle(self):
+        """
+        Composes a title from the object's properties. Default implementation returns null.  Override this if you need it.
+        """
+
+        ret = None
+        return ret
+
+    def composeAlternateTitle(self):
+        """
+        Composes a title from the object's properties. Default implementation returns null.  Override this if you need it.
+        """
+
+        ret = None
+        return ret
+
         
 
     def toRSCCsvRowArray(self):
@@ -502,7 +543,7 @@ class RSCSample(object):
         parts.append(str(self.coordinatesLatitude))
 
         if(self.publicationDate != None):
-            parts.append(str(self.publicationDate().strftime("%Y%m%d")))
+            parts.append(str(self.publicationDate.strftime("%Y%m%d")))
         else:
             parts.append(None)
 
