@@ -5,14 +5,6 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LibTXNDCPy", "LibTXNDCPy\LibTXNDCPy.pyproj", "{2E5D9AF6-6FD2-4014-AD70-AF0B15E2FEDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{34359390-7C56-493B-87B9-7D136F705657}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LibTXReSciCollPy", "LibTXReSciCollPy\LibTXReSciCollPy.pyproj", "{C01490C8-DF32-4437-889E-7F21B6F6B113}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibTXReSciCollCSharp", "LibTXReSciCollCSharp\LibTXReSciCollCSharp.csproj", "{52D98DDC-70BC-4261-95CD-5073DFB9F4E2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLibTXReSciCollCSharp", "DemoLibTXReSciCollCSharp\DemoLibTXReSciCollCSharp.csproj", "{FF60929B-6B5C-48B9-843D-DDA76BE0C834}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,20 +13,6 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2E5D9AF6-6FD2-4014-AD70-AF0B15E2FEDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2E5D9AF6-6FD2-4014-AD70-AF0B15E2FEDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{34359390-7C56-493B-87B9-7D136F705657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{34359390-7C56-493B-87B9-7D136F705657}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{34359390-7C56-493B-87B9-7D136F705657}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{34359390-7C56-493B-87B9-7D136F705657}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C01490C8-DF32-4437-889E-7F21B6F6B113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C01490C8-DF32-4437-889E-7F21B6F6B113}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52D98DDC-70BC-4261-95CD-5073DFB9F4E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52D98DDC-70BC-4261-95CD-5073DFB9F4E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52D98DDC-70BC-4261-95CD-5073DFB9F4E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52D98DDC-70BC-4261-95CD-5073DFB9F4E2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FF60929B-6B5C-48B9-843D-DDA76BE0C834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF60929B-6B5C-48B9-843D-DDA76BE0C834}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF60929B-6B5C-48B9-843D-DDA76BE0C834}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF60929B-6B5C-48B9-843D-DDA76BE0C834}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

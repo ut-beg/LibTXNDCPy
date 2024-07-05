@@ -1,4 +1,12 @@
 # LibTXNDCPy
+Note:  USGS has deprecated the "National Digital Collection" or NDC in favor of ReSciColl, and as such this library should no longer be used.  Instead, please see LibTXReSciCollPy and LibTXReSciCollCSharp.
+
+LibTXReSciCollPy - A simple python library for generating ReSciColl item-level metadata files.
+https://github.com/ut-beg/LibTXReSciCollPy
+
+LibTXReSciCollCSharp - A more mature library in C# for generating ReSciColl item-level metadata files.
+
+
 A Python library and some C# wrappers for generating the XML format required by USGS's [National Geological and Geophysical Data Preservation Program's](https://www.usgs.gov/core-science-systems/national-geological-and-geophysical-data-preservation-program) (NGGDPP) "National Digital Catalog" of geological sample materials.
 
 One of the difficulties faced by state geological surveys participating in the National Geological and Geophysical Data Preservation Program is the need to submit metadata back to USGS's National Digital Catalog (NDC) in a particular XML schema.  XML can be difficult to generate, as the code required to do so programmatically is often complex and verbose.  LibTXNDCPy addresses this difficulty by providing a simple API for populating this XML format.  Also provided are a command line launcher for usage either as a standalone converter or launching from languages that do not natively integrate with Python, and C# wrapper and interface library, which the Bureau of Economic Geology uses to interface with its own internal geologic materials database.
@@ -41,7 +49,7 @@ samples.addSample(rcs1)
 #Convert the sample object to the XML data.
 xmlText = samples.toNDCXmlString()
 
-#Do something with the excel data.
+#Do something with the XML data.
 print(xmlText)
 
 ```
